@@ -1,5 +1,5 @@
---- rubik-core.css	Tue Sep 28 22:50:30 2010
-+++ rubik-core.css	Wed Nov 17 12:27:58 2010
+--- core.css	Tue Sep 28 22:50:30 2010
++++ core.css	Wed Nov 17 12:27:58 2010
 @@ -1,3 +1,10 @@
 +/** next line and line 287 edited by @rudiedirkx **/
 +tr.odd:hover td, tr.even:hover td { background-color:#eee; }
