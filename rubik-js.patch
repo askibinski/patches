@@ -1,0 +1,27 @@
+diff --git a/rubik.original.js b/rubik.js
+index 04522ce..9a2056a 100644
+--- a/rubik.original.js
++++ b/rubik.js
+@@ -2,21 +2,7 @@
+  * Implementation of Drupal behavior.
+  */
+ Drupal.behaviors.rubik = function(context) {
+-  // If there are both main column and side column buttons, only show the main
+-  // column buttons if the user scrolls past the ones to the side.
+-  $('div.form:has(div.column-main div.buttons):not(.rubik-processed)').each(function() {
+-    var form = $(this);
+-    var offset = $('div.column-side div.buttons', form).height() + $('div.column-side div.buttons', form).offset().top;
+-    $(window).scroll(function () {
+-      if ($(this).scrollTop() > offset) {
+-        $('div.column-main div.buttons', form).show();
+-      }
+-      else {
+-        $('div.column-main div.buttons', form).hide();
+-      }
+-    });
+-    form.addClass('rubik-processed');
+-  });
++  // the form button behavior is silly
+ 
+   $('a.toggler:not(.rubik-processed)', context).each(function() {
+     var id = $(this).attr('href').split('#')[1];
