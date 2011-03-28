@@ -1,7 +1,5 @@
-diff --git a/rubik.original.js b/rubik.js
-index 04522ce..9a2056a 100644
---- a/rubik.original.js
-+++ b/rubik.js
+--- rubik.original.js	Mon Mar 28 15:35:00 2011
++++ rubik.js	Mon Mar 28 15:42:30 2011
 @@ -2,21 +2,7 @@
   * Implementation of Drupal behavior.
   */
