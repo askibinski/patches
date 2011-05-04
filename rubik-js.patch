@@ -1,5 +1,5 @@
---- rubik.original.js	Mon Mar 28 15:35:00 2011
-+++ rubik.js	Mon Mar 28 15:42:30 2011
+--- js/rubik.js	Mon Mar 28 15:35:00 2011
++++ js/rubik.js	Mon Mar 28 15:42:30 2011
 @@ -2,21 +2,7 @@
   * Implementation of Drupal behavior.
   */
