@@ -1,0 +1,15 @@
+--- includes/menu.inc
++++ includes/menu.inc
+@@ -895,7 +895,11 @@ function menu_tree_page_data($menu_name = 'navigation') {
+             $args[] = '<front>';
+             $placeholders .= ", '%s'";
+           }
+-          $parents = db_fetch_array(db_query("SELECT p1, p2, p3, p4, p5, p6, p7, p8 FROM {menu_links} WHERE menu_name = '%s' AND link_path IN (". $placeholders .")", $args));
++          $parents = array();
++          $result = db_query("SELECT p1, p2, p3, p4, p5, p6, p7, p8 FROM {menu_links} WHERE menu_name = '%s' AND link_path IN (". $placeholders .")", $args);
++          while ($row = db_fetch_array($result)) {
++            $parents = array_merge($parents, array_values($row));
++          }
+ 
+           if (empty($parents)) {
+             // If no link exists, we may be on a local task that's not in the links.
